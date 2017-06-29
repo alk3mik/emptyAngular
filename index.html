@@ -12,60 +12,73 @@
     	<h1>Formulaire avec AngularJS</h1>
 
 	    <div class="row formulaire">
+<!--
+	In AngularJS, forms can be nested. This means that the outer form is valid when all of the child forms are valid as well. However, browsers do not allow nesting of <form> elements, so AngularJS provides the ngForm directive, which behaves identically to form but can be nested
+-->
+<!--
+	You can use one of the following two ways to specify what javascript method should be called when a form is submitted:
+		1) ngSubmit directive on the form element
+		2) ngClick directive on the first button or input field of type submit (input[type=submit])
+-->
 	    	<form class="col s12">
+
 	      		<div class="row">
 	        		<div class="input-field col s4">
-	          			<!-- <input placeholder="Placeholder" id="first_name" type="text" class="validate"> -->
-	          			<input id="first_name" type="text" class="validate">
+	          			<i class="medium material-icons prefix">assignment_ind</i>
+	          			<input id="first_name" type="text" class="validate" ng-model="nom" >
 	          			<label for="first_name">Nom</label>
 	        		</div>
 	        		<div class="input-field col s4">
-	          			<input id="last_name" type="text" class="validate">
+	        			<i class="medium material-icons prefix">account_circle</i>
+	          			<input id="last_name" type="text" class="validate" ng-model="prenom" name="prenom">
 	          			<label for="last_name">Prénom</label>
 	        		</div>
 	        		<div class="input-field col s4">
-	          			<input id="email" type="email" class="validate">
+	        			<i class="medium material-icons prefix">email</i>
+	          			<input id="email" type="email" class="validate" ng-model="email" name="email">
 	          			<label for="email">Email</label>
 	        		</div>
 	      		</div>
+	      		<a class="btn-floating btn-large waves-effect waves-light blue" ng-click="submit()">
+	      			<i class="material-icons">
+	      				add
+	    			</i>
+	    		</a>
 
 	      	</form>
-	      	<a class="btn-floating btn-large waves-effect waves-light blue">
-	      		<i class="material-icons">
-	      			add
-	    		</i>
-	    	</a>
-	    </div>
-	  
-	    <div class="tableau">
-	    	<table>
-        	<thead>
-          	<tr>
-            	<th>Nom</th>
-              	<th>Prénom</th>
-              	<th>Email</th>
-          	</tr>
-        	</thead>
 
-        	<tbody>
+	  		<div class="row tableau">
 
-          	<!-- <tr>
-           	 	<td>Alvin</td>
-            	<td>Eclair</td>
-            	<td>$0.87</td>
-          	</tr>
-          	<tr>
-            	<td>Alan</td>
-            	<td>Jellybean</td>
-            	<td>$3.76</td>
-          	</tr>
-          	<tr>
-            	<td>Jonathan</td>
-            	<td>Lollipop</td>
-            	<td>$7.00</td>
-          	</tr> -->
-        	</tbody>
-      		</table>
+	    		<table class="col s12">
+        			<thead>
+          				<tr class="table-head">
+            				<th>
+            					<i class="tiny material-icons prefix">assignment_ind</i>
+            					Nom
+            				</th>
+              				<th>
+              					<i class="tiny material-icons prefix">account_circle</i>
+              					Prénom
+              				</th>
+              				<th>
+              					<i class="tiny material-icons prefix">email</i>
+              					Email
+              				</th>
+          				</tr>
+        			</thead>
+
+        			<tbody>
+
+						<tr ng-repeat="detail in person">
+							<td> {{ detail.nom }} </td>
+							<td> {{ detail.prenom }} </td>
+							<td> {{ detail.email }} </td>
+						</tr>
+        			
+        			</tbody>
+      			</table>
+
+      		</div>
       	</div>
 
         <script src="node_modules/angular/angular.min.js"></script>

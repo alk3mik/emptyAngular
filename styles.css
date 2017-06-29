@@ -15,25 +15,6 @@ html, body{
   background-color: #038437;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-html{
-  font: .9em 'Raleway',sans-serif;
-  height: 100%;
-  /*text-align: center;*/
-  /*background: radial-gradient(50% 0,rgba(255,255,255,.3),rgba(255,255,255,0)), deepskyblue;*/
-  color: rgba(0,0,0,.6);
-}
-
-/*
-    Definition classes
-*/
-
-/* HOME */
-
-/*h1, h2 {
-    font-family: Roboto, sans-serif;
-}*/
-
 h1 {
   position: absolute;
   left: 50%;
@@ -42,14 +23,7 @@ h1 {
   text-align: center;
   font-weight: 300;
   font-size: 30px;
-  /*margin-top: -10px;*/
 }
-
-/*h3 {
-    font-weight: 350;
-    font-size: 26px;
-}
-*/
 
 .formulaire {
   background-color: #ffcc01;
@@ -62,18 +36,23 @@ h1 {
 
 .btn-floating {
   position: absolute;
-  top: 25%;
-  /*left: 70%;*/
+  top: 22%;
+  left: 101%;
 }
 
 .tableau {
   background-color: #aacc01;
   position: absolute;
   left: 50%;
-  top: 35%;
-  width: 500px;
+  top: 100%;
   transform: translate(-50%, 0);
+  width: 500px;
+  margin-top: 50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   text-align: center;
+}
+
+.table-head {
+  text-align: left;
 }
