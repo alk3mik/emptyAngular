@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" lang="fr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
         <title>Angular Project</title>
     </head>
     <body ng-controller='mainController as vm'>
 
-        <script src="js/libs/angular.min.js"></script>
+    	<h1>Formulaire avec AngularJS</h1>
+
+	    <div class="row formulaire">
+	    	<form class="col s12">
+	      		<div class="row">
+	        		<div class="input-field col s4">
+	          			<!-- <input placeholder="Placeholder" id="first_name" type="text" class="validate"> -->
+	          			<input id="first_name" type="text" class="validate">
+	          			<label for="first_name">Nom</label>
+	        		</div>
+	        		<div class="input-field col s4">
+	          			<input id="last_name" type="text" class="validate">
+	          			<label for="last_name">Prénom</label>
+	        		</div>
+	        		<div class="input-field col s4">
+	          			<input id="email" type="email" class="validate">
+	          			<label for="email">Email</label>
+	        		</div>
+	      		</div>
+
+	      	</form>
+	      	<a class="btn-floating btn-large waves-effect waves-light blue">
+	      		<i class="material-icons">
+	      			add
+	    		</i>
+	    	</a>
+	    </div>
+	  
+	    <div class="tableau">
+	    	<table>
+        	<thead>
+          	<tr>
+            	<th>Nom</th>
+              	<th>Prénom</th>
+              	<th>Email</th>
+          	</tr>
+        	</thead>
+
+        	<tbody>
+
+          	<!-- <tr>
+           	 	<td>Alvin</td>
+            	<td>Eclair</td>
+            	<td>$0.87</td>
+          	</tr>
+          	<tr>
+            	<td>Alan</td>
+            	<td>Jellybean</td>
+            	<td>$3.76</td>
+          	</tr>
+          	<tr>
+            	<td>Jonathan</td>
+            	<td>Lollipop</td>
+            	<td>$7.00</td>
+          	</tr> -->
+        	</tbody>
+      		</table>
+      	</div>
+
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
         <script src="js/controllers/mainController.js"></script>
         <script src="js/app.js"></script>
     </body>

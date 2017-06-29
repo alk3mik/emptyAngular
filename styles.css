@@ -1,0 +1,79 @@
+/*
+ *       Font ROBOTO:
+ * font-family: 'Roboto', sans-serif;
+ * font-weight: 100,300,400,500,700,900
+ *
+ */
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+html, body{
+/*  width: 100vh;
+  height: 100vh;*/
+  background-color: #038437;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+html{
+  font: .9em 'Raleway',sans-serif;
+  height: 100%;
+  /*text-align: center;*/
+  /*background: radial-gradient(50% 0,rgba(255,255,255,.3),rgba(255,255,255,0)), deepskyblue;*/
+  color: rgba(0,0,0,.6);
+}
+
+/*
+    Definition classes
+*/
+
+/* HOME */
+
+/*h1, h2 {
+    font-family: Roboto, sans-serif;
+}*/
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #c4ff01;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+  /*margin-top: -10px;*/
+}
+
+/*h3 {
+    font-weight: 350;
+    font-size: 26px;
+}
+*/
+
+.formulaire {
+  background-color: #ffcc01;
+  position: absolute;
+  top: 15%;
+  border-radius: 20px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.btn-floating {
+  position: absolute;
+  top: 25%;
+  /*left: 70%;*/
+}
+
+.tableau {
+  background-color: #aacc01;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 500px;
+  transform: translate(-50%, 0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
