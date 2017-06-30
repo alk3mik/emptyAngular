@@ -7,7 +7,8 @@
 		<link rel="stylesheet" href="styles.css">
         <title>Angular Project</title>
     </head>
-    <body ng-controller='mainController as vm'>
+    <!-- <body ng-controller='mainController as vm'> -->
+    <body ng-controller='mainController'>
 
     	<h1>Formulaire avec AngularJS</h1>
 
@@ -20,8 +21,8 @@
 		1) ngSubmit directive on the form element
 		2) ngClick directive on the first button or input field of type submit (input[type=submit])
 -->
+<!-- 	    	<form class="col s12" ng-submit="submit()"> -->
 	    	<form class="col s12">
-
 	      		<div class="row">
 	        		<div class="input-field col s4">
 	          			<i class="medium material-icons prefix">assignment_ind</i>
@@ -30,16 +31,17 @@
 	        		</div>
 	        		<div class="input-field col s4">
 	        			<i class="medium material-icons prefix">account_circle</i>
-	          			<input id="last_name" type="text" class="validate" ng-model="prenom" name="prenom">
+	          			<input id="last_name" type="text" class="validate" ng-model="prenom">
 	          			<label for="last_name">Prénom</label>
 	        		</div>
 	        		<div class="input-field col s4">
 	        			<i class="medium material-icons prefix">email</i>
-	          			<input id="email" type="email" class="validate" ng-model="email" name="email">
+	          			<input id="email" type="email" class="validate" ng-model="email">
 	          			<label for="email">Email</label>
 	        		</div>
 	      		</div>
 	      		<a class="btn-floating btn-large waves-effect waves-light blue" ng-click="submit()">
+<!-- 	      		<a class="btn-floating btn-large waves-effect waves-light blue"> -->
 	      			<i class="material-icons">
 	      				add
 	    			</i>
